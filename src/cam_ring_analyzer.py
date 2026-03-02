@@ -5,8 +5,15 @@ This module performs edge detection on cam ring images and computes
 the radial distance between inner and outer edges at multiple angular intervals.
 """
 
+import os
+os.environ['DISPLAY'] = ''
+
 import cv2
+cv2.setNumThreads(4)
+
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')  # Use non-GUI backend
 import matplotlib.pyplot as plt
 from scipy import ndimage
 from pathlib import Path

@@ -5,6 +5,9 @@ This script demonstrates the usage of the CamRingAnalyzer class
 to process cam ring images and generate results.
 """
 
+import os
+os.environ['DISPLAY'] = ''
+
 import sys
 from pathlib import Path
 import cv2

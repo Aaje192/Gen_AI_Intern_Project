@@ -5,6 +5,9 @@ This module provides functions to create synthetic cam ring images
 with known parameters for testing and validation of the analyzer.
 """
 
+import os
+os.environ['DISPLAY'] = ''
+
 import numpy as np
 import cv2
 from pathlib import Path

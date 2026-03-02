@@ -4,15 +4,18 @@ Test and Demo Script for Cam Ring Analysis Project
 This script tests all functionality and generates sample outputs.
 """
 
+import os
+os.environ['DISPLAY'] = ''
+
 import sys
 from pathlib import Path
 import numpy as np
 
 # Add src folder to path
-sys.path.insert(0, str(Path(__file__).parent / 'src'))
+sys.path.insert(0, str(Path(__file__).parent))
 
-from cam_ring_analyzer import CamRingAnalyzer
-from image_generator import (
+from src.cam_ring_analyzer import CamRingAnalyzer
+from src.image_generator import (
     create_synthetic_cam_ring,
     create_elliptical_cam_ring,
     create_irregular_cam_ring

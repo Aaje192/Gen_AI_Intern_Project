@@ -5,14 +5,17 @@ This script provides a simple example of how to use the CamRingAnalyzer
 to process a cam ring image and generate all outputs.
 """
 
+import os
+os.environ['DISPLAY'] = ''
+
 import sys
 from pathlib import Path
 
 # Add src folder to path
-sys.path.insert(0, str(Path(__file__).parent / 'src'))
+sys.path.insert(0, str(Path(__file__).parent))
 
-from cam_ring_analyzer import CamRingAnalyzer
-from image_generator import generate_test_images
+from src.cam_ring_analyzer import CamRingAnalyzer
+from src.image_generator import generate_test_images
 
 
 def main():
